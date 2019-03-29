@@ -15,10 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lista/{ventas}', 'LocalesDP@calificar');
+Route::get('/agregar', function() {
+  return view('agregar');
+});
 
-/*Route::get('/lista/{ventas}', function () {
+Route::post('/agregar_post', 'PostsController@ingresarEntradas');
 
-  return view('lista',['ventas'=> $venta]);
-});*/
+Route::get('/entradas/ver', 'PostsController@verEntradas')->name('listado');
 
+Route::delete('/entradas/{id}', 'PostsController@borrarEntrada');
