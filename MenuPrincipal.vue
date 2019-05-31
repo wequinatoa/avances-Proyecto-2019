@@ -15,12 +15,14 @@
         <router-link to="/MenuRetos" tag="button" class="btn btn-primary btn-lg">Retos</router-link>
       </div>
     </div>
+
+    
   </header>
 </template>
 
 <script>
 export default {
-  mounted() {
+     mounted() {
     console.log("Component mounted.");
   }
 };
